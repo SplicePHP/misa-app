@@ -1,0 +1,8 @@
+{
+  "name": "misa-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "pro_id": "e2317edf"
+}
