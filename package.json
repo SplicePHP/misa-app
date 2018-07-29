@@ -4,12 +4,15 @@
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "scripts": {
+    "aws": "awsmobile run",
+    "publish": "awsmobile publish",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "ngstart": "ng serve",
+    "build": "[ -f src/aws-exports.js ] && mv src/aws-exports.js src/aws-exports.ts || ng build --prod; ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve": "ionic serve -c"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +30,8 @@
     "@ionic/ng-toolkit": "1.0.0",
     "@ionic/pro": "2.0.3",
     "@ionic/schematics-angular": "1.0.1",
+    "aws-amplify": "^1.0.4",
+    "aws-amplify-angular": "^1.0.2",
     "core-js": "^2.5.3",
     "rxjs": "6.2.2",
     "zone.js": "^0.8.26"
